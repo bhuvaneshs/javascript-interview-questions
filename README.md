@@ -69,24 +69,24 @@ use strict is a directive that enforces strict parsing and error handling in jav
 'use strict'; makes your code less error-prone, easier to debug, and more secure by eliminating some silent bugs and enforcing better practices.
 
 Examples :
-1) Prevents accidental globals
+# Prevents accidental globals
    
 'use strict';
 x = 10; // ❌ ReferenceError: x is not defined
 
-3) Disallows duplicate parameter names
+# Disallows duplicate parameter names
    
 'use strict';
 function test(a, a) {} // ❌ SyntaxError
 
-5) Disallows assignment to read-only or non-writable properties
+# Disallows assignment to read-only or non-writable properties
    
 'use strict';
 const obj = {};
 Object.defineProperty(obj, "x", { value: 42, writable: false });
 obj.x = 9; // ❌ TypeError
 
-7) Makes this undefined in functions (not the global object)
+# Makes this undefined in functions (not the global object)
    
 'use strict';
 function show() {
@@ -94,7 +94,7 @@ function show() {
 }
 show();
 
-9) Throws errors for using reserved keywords for future JS versions
+# Throws errors for using reserved keywords for future JS versions
 
 'use strict';
 let public = 123; // ❌ SyntaxError
